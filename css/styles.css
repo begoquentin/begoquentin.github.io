@@ -64,6 +64,14 @@
   --bs-body-bg: #fff;
 }
 
+@font-face {
+  font-family: 'moontimeregular';
+  src: url('https://begoquentin.github.io/assets/fonts/moontime-regular-webfont.woff2') format('woff2'),
+       url('https://begoquentin.github.io/assets/fonts/moontime-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -300,6 +308,7 @@ figure {
 img,
 svg {
   vertical-align: middle;
+  border-radius: 10px;
 }
 
 table {
@@ -578,7 +587,7 @@ progress {
 
 .initialism {
   font-size: 0.875em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .blockquote {
@@ -3420,7 +3429,7 @@ textarea.form-control-lg {
 }
 
 .btn-outline-light {
-  color: #f8f9fa;
+  /* color: #f8f9fa; */
   border-color: #f8f9fa;
 }
 .btn-outline-light:hover {
@@ -7693,7 +7702,7 @@ textarea.form-control-lg {
 }
 
 .text-uppercase {
-  text-transform: uppercase !important;
+  /* text-transform: uppercase !important; */
 }
 
 .text-capitalize {
@@ -11366,6 +11375,8 @@ html {
   padding-bottom: 1rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
+  box-shadow: 0 0 0 0.03rem #6c757d;
+  background: white;
 }
 #mainNav .navbar-brand {
   color: #2c3e50;
@@ -11443,8 +11454,9 @@ html {
   padding-bottom: 6rem;
 }
 .masthead .masthead-heading {
-  font-size: 2.75rem;
-  line-height: 2.75rem;
+  font-size: 6rem !important;
+  line-height: 4rem;
+  font-family: "moontimeregular", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .masthead .masthead-subheading {
   font-size: 1.25rem;
@@ -11531,11 +11543,3 @@ html {
   width: auto;
 } */
 
-@font-face {
-  font-family: 'moontimeregular';
-  src: url('moontime-regular-webfont.woff2') format('woff2'),
-       url('moontime-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
