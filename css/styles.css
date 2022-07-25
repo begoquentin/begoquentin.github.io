@@ -11407,8 +11407,9 @@ html {
   color: #1abc9c;
 }
 #mainNav .navbar-toggler {
-  font-size: 80%;
   padding: 0.8rem;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 @media (min-width: 992px) {
