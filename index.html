@@ -23,7 +23,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.4/css/flag-icons.min.css"
         integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script>
+        function show(id, motif) {
+            var x = document.getElementById("iban"+id);
+            var iban = fetchFile("https://storage.googleapis.com/begoquentin2023/hello.txt");
+            x.innerHTML = `
+                <p class="iban"><b>Motif:</b> ` + motif + ` :)</p>
+                <p class="iban"><b>IBAN:</b> ` + iban + `</p>
+            `;
+            x.style.display = "block";
+        }
+        function hideAll() {
+            console.log("hideAll ");
+            for (let i = 0; i <= 3; i++) {
+                var x = document.getElementById("iban"+i);
+                x.style.display = "none";
+            }
+        }
+        function fetchFile(url) {
+            fetch(url, {mode: 'cors'}).then(res => res.text()).then(text => {
+                console.log(text);
+                return text;
+            }).catch(() => {
+                alert("Mot de passe incorrect");
+            });
+        }
+        function passwordCheck(){
+            var password = prompt("Veuillez saisir le mot de passe");
+            if (password === "ilikepie") {
+                window.location = "index.html";
+            } else if (password != '' && password != null) {
+                while (password !== "ilikepie") {
+                    password = prompt("Please enter the password.");
+                }
+                window.location = "index.html";
+            }
+        }
+// window.onload=passwordCheck;
+    </script>
 </head>
 
 <body id="page-top">
@@ -48,7 +85,7 @@
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#cocktail">Vin
                             d'honneur et repas</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#lista_boda">Suggestions d'hôtels</a></li>
+                            href="#suggestions">Suggestions d'hôtels</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                             href="#lista_boda">Liste de mariage</a></li>
                 </ul>
@@ -123,7 +160,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <p class="lead">Le lieu de célébration est à 7 minutes a pieds de l'eglise.</p>
+                    <p class="lead">Le lieu de célébration est à 7 minutes à pieds de l'église.</p>
                 </div>
             </div>
 
@@ -161,7 +198,7 @@
         </div>
     </section>
 
-    <section class="page-section" id="cocktail">
+    <section class="page-section" id="suggestions">
         <div class="container">
             <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Suggestions d'hôtels</h2>
             <!-- Icon Divider-->
@@ -173,27 +210,27 @@
             <!-- About Section Content-->
             <div class="row justify-content-center">
                 <!-- General Information Item 1-->
-                <div class="col-lg-2"></div>
                 <div class="col-lg-8">
                     <p class="lead">Vous avez beaucoup de possibilités de logements. Voici quelques suggestions
                         d'hôtels:
                     </p>
-                    <a class="btn btn-xl btn-outline-light"
-                        href="https://es.traveluro.com/hotel/301391?start_date=2023-04-20&end_date=2023-04-24&num_rooms=1&ts=Google_ES&curr=EUR&data_key=MTAwX1VTRF80Xzk0LjM5X18yMDIzLTAxLTE3IDIzOjU0OjA5X1JPX05fXzBfREVTS1RPUF8xMl8wX1VTRF8yMDIzLTAxLTE3IDExOjU0OjA5Xzg0X0VVUg&mfa_data_key=&PT=369.00&PTF=33.00&device=desktop&party=%5B%7B%22adults%22:2,%22children%22:%5B%5D%7D%5D&user_country=ES&user_lang=es&num_adults=2&site=mapresults&rule=Google_ES&ads=11606206474&PPA=0&DD=0&gclid=CjwKCAiAzp6eBhByEiwA_gGq5ErpTEYEk-lbJTHhtq7e-uO6G-09zRpGmCAioO7PWPSeeoQzx8cj5hoCBEkQAvD_BwE&click=1">
-                        Estancia Togumar
-                    </a>
-                    <a class="btn btn-xl btn-outline-light"
-                        href="https://es.traveluro.com/hotel/121880?start_date=2023-04-20&end_date=2023-04-24&num_rooms=1&ts=Google_ES&curr=EUR&data_key=ODhfVVNEXzQwXzgzLjc1X0dvb2dsZV8yMDIzLTAxLTE5IDA1OjEyOjAyX1JPX05fXzBfREVTS1RPUF8xMl8wX1VTRF8yMDIzLTAxLTE5IDA1OjIzOjUzXzc0X0VVUg&mfa_data_key=&PT=326.00&PTF=30.00&device=desktop&party=%5B%7B%22adults%22%3A2%2C%22children%22%3A%5B%5D%7D%5D&user_country=ES&user_lang=es&num_adults=2&site=mapresults&rule=Google_ES&ads=&PPA=0&DD=0&click=1">
-                        Hotel Nuevo Madrid
-                    </a>
-                    <a class="btn btn-xl btn-outline-light"
-                        href="https://www.expedia.es/Madrid-Hoteles-Apartamentos-Goya-75.h15782929.Informacion-Hotel?chkin=2023-04-20&chkout=2023-04-24&x_pwa=1&rfrr=HSR&pwa_ts=1674120282559&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5lcy9Ib3RlbC1TZWFyY2g%3D&useRewards=false&rm1=a2&regionId=2198&destination=Madrid%2C+Comunidad+de+Madrid%2C+Espa%C3%B1a&destType=MARKET&neighborhoodId=6053453&selected=15782929&sort=RECOMMENDED&top_dp=340&top_cur=EUR&mdpcid=ES.META.HPA.HOTEL-CORESEARCH-desktop.HOTEL&mdpdtl=HTL.15782929.20230420.20230424.DDF.91.CID.17217401160.AUDID.&mctc=10&userIntent=&selectedRoomType=201648467&selectedRatePlan=208232196">
-                        Apartamentos Goya 75
-                    </a>
-                    <a class="btn btn-xl btn-outline-light"
-                        href="https://www.bluepillow.es/checkout/5dab14eee24da420980c2097?begin=2023-04-20&end=2023-04-24&currency=EUR&language=es&utm_campaign=hotel&block_id=-b490472001_163711723_2_42_0-p427.98-0-0-USD-bkng-Hotel&country=ES">
-                        Ibis Styles Madrid City Las Ventas
-                    </a>
+                    <div class="row"><a class="btn btn-xl btn-outline-light"
+                            href="https://es.traveluro.com/hotel/301391?start_date=2023-04-20&end_date=2023-04-24&num_rooms=1&ts=Google_ES&curr=EUR&data_key=MTAwX1VTRF80Xzk0LjM5X18yMDIzLTAxLTE3IDIzOjU0OjA5X1JPX05fXzBfREVTS1RPUF8xMl8wX1VTRF8yMDIzLTAxLTE3IDExOjU0OjA5Xzg0X0VVUg&mfa_data_key=&PT=369.00&PTF=33.00&device=desktop&party=%5B%7B%22adults%22:2,%22children%22:%5B%5D%7D%5D&user_country=ES&user_lang=es&num_adults=2&site=mapresults&rule=Google_ES&ads=11606206474&PPA=0&DD=0&gclid=CjwKCAiAzp6eBhByEiwA_gGq5ErpTEYEk-lbJTHhtq7e-uO6G-09zRpGmCAioO7PWPSeeoQzx8cj5hoCBEkQAvD_BwE&click=1">
+                            Estancia Togumar
+                        </a></div>
+
+                    <div class="row"><a class="btn btn-xl btn-outline-light"
+                            href="https://es.traveluro.com/hotel/121880?start_date=2023-04-20&end_date=2023-04-24&num_rooms=1&ts=Google_ES&curr=EUR&data_key=ODhfVVNEXzQwXzgzLjc1X0dvb2dsZV8yMDIzLTAxLTE5IDA1OjEyOjAyX1JPX05fXzBfREVTS1RPUF8xMl8wX1VTRF8yMDIzLTAxLTE5IDA1OjIzOjUzXzc0X0VVUg&mfa_data_key=&PT=326.00&PTF=30.00&device=desktop&party=%5B%7B%22adults%22%3A2%2C%22children%22%3A%5B%5D%7D%5D&user_country=ES&user_lang=es&num_adults=2&site=mapresults&rule=Google_ES&ads=&PPA=0&DD=0&click=1">
+                            Hotel Nuevo Madrid
+                        </a></div>
+                    <div class="row"><a class="btn btn-xl btn-outline-light"
+                            href="https://www.expedia.es/Madrid-Hoteles-Apartamentos-Goya-75.h15782929.Informacion-Hotel?chkin=2023-04-20&chkout=2023-04-24&x_pwa=1&rfrr=HSR&pwa_ts=1674120282559&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5lcy9Ib3RlbC1TZWFyY2g%3D&useRewards=false&rm1=a2&regionId=2198&destination=Madrid%2C+Comunidad+de+Madrid%2C+Espa%C3%B1a&destType=MARKET&neighborhoodId=6053453&selected=15782929&sort=RECOMMENDED&top_dp=340&top_cur=EUR&mdpcid=ES.META.HPA.HOTEL-CORESEARCH-desktop.HOTEL&mdpdtl=HTL.15782929.20230420.20230424.DDF.91.CID.17217401160.AUDID.&mctc=10&userIntent=&selectedRoomType=201648467&selectedRatePlan=208232196">
+                            Apartamentos Goya 75
+                        </a></div>
+                    <div class="row"><a class="btn btn-xl btn-outline-light"
+                            href="https://www.bluepillow.es/checkout/5dab14eee24da420980c2097?begin=2023-04-20&end=2023-04-24&currency=EUR&language=es&utm_campaign=hotel&block_id=-b490472001_163711723_2_42_0-p427.98-0-0-USD-bkng-Hotel&country=ES">
+                            Ibis Styles Madrid City Las Ventas
+                        </a></div>
                 </div>
             </div>
 
@@ -222,49 +259,172 @@
                             <div class="col-12">
                             </div>
                         </div>
+
+                        <!-- Carousel wrapper -->
+                        <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center">
+                            <!-- Inner -->
+                                <!-- Single item -->
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-4">
+                                                <div class="card">
+                                                    <img src="assets/img/casa.webp"
+                                                        class="card-img-top" alt="Waterfall" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Maison</h5>
+                                                        <p class="card-text">
+                                                            Par contribution
+                                                        </p>
+                                                        <a onclick="hideAll(); show('0', 'Maison');" class="btn btn-primary">Choisir</a>
+                                                    </div>
+                                                    <div id="iban0" class="card-title" style="display: none;"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 d-none d-lg-block">
+                                                <div class="card">
+                                                    <img src="assets/img/viaje.webp"
+                                                        class="card-img-top" alt="Sunset Over the Sea" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Voyage de noces</h5>
+                                                        <p class="card-text">
+                                                            Par contribution
+                                                        </p>
+                                                        <a onclick="hideAll(); show('1', 'Voyage')" class="btn btn-primary">Choisir</a>
+                                                    </div>
+                                                    <div id="iban1" class="card-title" style="display: none;"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 d-none d-lg-block">
+                                                <div class="card">
+                                                    <img src="assets/img/aspirador.webp"
+                                                        class="card-img-top" alt="Sunset over the Sea" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Aspirateur Dyson</h5>
+                                                        <p class="card-text">
+                                                            Par contribution - 699 €
+                                                        </p>
+                                                        <a onclick="hideAll(); show('2', 'Aspirateur')" class="btn btn-primary">Choisir</a>
+                                                    </div>
+                                                    <div id="iban2" class="card-title" style="display: none;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <!-- Single item -->
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-12">
+                                                <div class="card">
+                                                    <img src="assets/img/pans.webp"
+                                                        class="card-img-top" alt="Fissure in Sandstone" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Poêles</h5>
+                                                        <p class="card-text">
+                                                            Some quick example text to build on the card title and make
+                                                            up the bulk
+                                                            of the card's content.
+                                                        </p>
+                                                        <a onclick="hideAll(); show('3', 'Poêles')" class="btn btn-primary">Choisir</a>
+                                                    </div>
+                                                    <div id="iban3" class="card-title" style="display: none;"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 d-none d-lg-block">
+                                                <div class="card">
+                                                    <img src="assets/img/pot.webp"
+                                                        class="card-img-top" alt="Storm Clouds" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Card title</h5>
+                                                        <p class="card-text">
+                                                            Some quick example text to build on the card title and make
+                                                            up the bulk
+                                                            of the card's content.
+                                                        </p>
+                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 d-none d-lg-block">
+                                                <div class="card">
+                                                    <img src="assets/img/pots.webp"
+                                                        class="card-img-top" alt="Hot Air Balloons" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Card title</h5>
+                                                        <p class="card-text">
+                                                            Some quick example text to build on the card title and make
+                                                            up the bulk
+                                                            of the card's content.
+                                                        </p>
+                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- Single item -->
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                                                <div class="card">
+                                                    <img src="assets/img/vajilla.webp"
+                                                        class="card-img-top" alt="Peaks Against the Starry Sky" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Card title</h5>
+                                                        <p class="card-text">
+                                                            Some quick example text to build on the card title and make
+                                                            up the bulk
+                                                            of the card's content.
+                                                        </p>
+                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                                                <div class="card">
+                                                    <img src="assets/img/couverts.webp"
+                                                        class="card-img-top" alt="Bridge Over Water" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Card title</h5>
+                                                        <p class="card-text">
+                                                            Some quick example text to build on the card title and make
+                                                            up the bulk
+                                                            of the card's content.
+                                                        </p>
+                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                                                <div class="card">
+                                                    <img src="assets/img/agua.webp"
+                                                        class="card-img-top" alt="Purbeck Heritage Coast" />
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Card title</h5>
+                                                        <p class="card-text">
+                                                            Some quick example text to build on the card title and make
+                                                            up the bulk
+                                                            of the card's content.
+                                                        </p>
+                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            <!-- Inner -->
+                        </div>
+                        <!-- Carousel wrapper -->
+
                         <ul class="gift-card__grid ui-sortable list-unstyled" id="gifts_summary">
-                            <li
-                                class="gift-card__banner u-bg--turquoise-soft u-box--shadow text-center mbm d-none d-md-block">
-                                <div class="phm ptm pbm">
-                                    <img class="gift-card__banner--img mtb mbm prm plm"
-                                        src="https://asset1.zankyou.com/image/myzk/giftlist/gift-banner.svg" alt=""> <a
-                                        href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/catalogo-regalos"
-                                        class="gift-card__banner--button zk-button--oval--green bg--white mtb">
-                                        <svg class="u-pad-5--right icon js-lazy-icon" aria-hidden="true" width="20"
-                                            height="20">
-                                            <use href="#i-plus-thin"></use>
-                                        </svg> Añade regalos </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/nuevo-regalo"
-                                        class="gift-card__banner--button zk-button--oval--green bg--white mts">
-                                        <svg class="u-pad-5--right icon js-lazy-icon" aria-hidden="true" width="20"
-                                            height="20">
-                                            <use href="#i-plus-thin"></use>
-                                        </svg> Crea regalo o viaje </a>
-                                </div>
-                            </li>
-                            <li class="gift-card__banner u-bg--turquoise-soft u-box--shadow text-center mbm d-md-none"
-                                style="">
-                                <div class="row ptm pbm phs u-box__flex--vcenter">
-                                    <div class="col-4">
-                                        <img class="gift-card__banner--img"
-                                            src="https://asset1.zankyou.com/image/myzk/giftlist/gift-banner.svg" alt="">
-                                    </div>
-                                    <div class="col-8">
-                                        <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/catalogo-regalos"
-                                            class="zk-button--oval--green bg--white">
-                                            <svg class="u-pad-5--right icon js-lazy-icon" aria-hidden="true" width="20"
-                                                height="20">
-                                                <use href="#i-plus-thin"></use>
-                                            </svg> Añade regalos </a>
-                                        <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/nuevo-regalo"
-                                            class="zk-button--oval--green bg--white mts">
-                                            <svg class="u-pad-5--right icon js-lazy-icon" aria-hidden="true" width="20"
-                                                height="20">
-                                                <use href="#i-plus-thin"></use>
-                                            </svg> Crea regalo o viaje </a>
-                                    </div>
-                                </div>
-                            </li>
+
                             <li id="gift_8540779" class="js-element-wrapper gift-card">
                                 <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540779"
                                     class="gift-card__photo-wrapper">
