@@ -23,15 +23,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.4/css/flag-icons.min.css"
         integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
     <script>
         function show(id, motif) {
+            var encrypted_path = "U2FsdGVkX1/nEGwuRLte4yGj6DSwmtY2vwHptnIaPlNkZgrEgR3AntTz21/75ujHWfYV3DaCPCMh97IoqsjSbA==";
+            var mdp = getCookieMdp();
+            if (!mdp) {
+                mdp = prompt("Veuillez saisir le mot de passe");
+            }
+            var decrypted = CryptoJS.AES.decrypt(
+                encrypted_path,
+                mdp
+            ).toString(CryptoJS.enc.Utf8);
             var x = document.getElementById("iban"+id);
-            var iban = fetchFile("https://storage.googleapis.com/begoquentin2023/hello.txt");
-            x.innerHTML = `
-                <p class="iban"><b>Motif:</b> ` + motif + ` :)</p>
-                <p class="iban"><b>IBAN:</b> ` + iban + `</p>
-            `;
-            x.style.display = "block";
+            fetch("https://storage.googleapis.com/begoquentin2023/"+decrypted+"/iban.txt").then(res => {
+                if (!res.ok) {
+                    alert("Mot de passe incorrect");
+                } else {
+                    setCookieMdp(mdp);
+                    return res.text();
+                }}).then(text => {
+                    console.log(text);
+                    x.innerHTML = `
+                        <p class="iban"><b>Motif:</b> ` + motif + ` :)</p>
+                        <p class="iban"><b>IBAN:</b> ` + text + `</p>
+                    `;
+                    x.style.display = "block";
+
+                }).catch(() => {
+                    alert("Mot de passe incorrect");
+                });
+
         }
         function hideAll() {
             console.log("hideAll ");
@@ -40,26 +62,25 @@
                 x.style.display = "none";
             }
         }
-        function fetchFile(url) {
-            fetch(url, {mode: 'cors'}).then(res => res.text()).then(text => {
-                console.log(text);
-                return text;
-            }).catch(() => {
-                alert("Mot de passe incorrect");
-            });
+        function setCookieMdp(value) {
+            var expires = "";
+            var date = new Date();
+            date.setTime(date.getTime() + (120*24*60*60*1000));
+            var expires = "; expires=" + date.toUTCString();
+            console.log("storing cookie = "+value);
+            console.log("expires = "+expires);
+            document.cookie = "mdp=" + (value || "")  + expires + "; path=/";
         }
-        function passwordCheck(){
-            var password = prompt("Veuillez saisir le mot de passe");
-            if (password === "ilikepie") {
-                window.location = "index.html";
-            } else if (password != '' && password != null) {
-                while (password !== "ilikepie") {
-                    password = prompt("Please enter the password.");
-                }
-                window.location = "index.html";
+        function getCookieMdp() {
+            var nameEQ = "mdp=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
             }
+            return null;
         }
-// window.onload=passwordCheck;
     </script>
 </head>
 
