@@ -57,7 +57,7 @@
         }
         function hideAll() {
             console.log("hideAll ");
-            for (let i = 0; i <= 3; i++) {
+            for (let i = 0; i <= 16; i++) {
                 var x = document.getElementById("iban"+i);
                 x.style.display = "none";
             }
@@ -322,7 +322,7 @@
                                                     <img src="assets/img/aspirador.webp"
                                                         class="card-img-top" alt="Sunset over the Sea" />
                                                     <div class="card-body">
-                                                        <h5 class="card-title">Aspirateur Dyson</h5>
+                                                        <h5 class="card-title">Aspirateur</h5>
                                                         <p class="card-text">
                                                             Par contribution - 699 €
                                                         </p>
@@ -344,9 +344,7 @@
                                                     <div class="card-body">
                                                         <h5 class="card-title">Poêles</h5>
                                                         <p class="card-text">
-                                                            Some quick example text to build on the card title and make
-                                                            up the bulk
-                                                            of the card's content.
+                                                            Par contribution - 279 €
                                                         </p>
                                                         <a onclick="hideAll(); show('3', 'Poêles')" class="btn btn-primary">Choisir</a>
                                                     </div>
@@ -359,14 +357,13 @@
                                                     <img src="assets/img/pot.webp"
                                                         class="card-img-top" alt="Storm Clouds" />
                                                     <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
+                                                        <h5 class="card-title">Cocotte</h5>
                                                         <p class="card-text">
-                                                            Some quick example text to build on the card title and make
-                                                            up the bulk
-                                                            of the card's content.
+                                                            Par contribution - 315 €
                                                         </p>
-                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                        <a onclick="hideAll(); show('4', 'Cocotte')" class="btn btn-primary">Choisir</a>
                                                     </div>
+                                                    <div id="iban4" class="card-title" style="display: none;"></div>
                                                 </div>
                                             </div>
 
@@ -375,14 +372,13 @@
                                                     <img src="assets/img/pots.webp"
                                                         class="card-img-top" alt="Hot Air Balloons" />
                                                     <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
+                                                        <h5 class="card-title">Casseroles</h5>
                                                         <p class="card-text">
-                                                            Some quick example text to build on the card title and make
-                                                            up the bulk
-                                                            of the card's content.
+                                                            Par contribution - 459 €
                                                         </p>
-                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                        <a onclick="hideAll(); show('5', 'Casseroles')" class="btn btn-primary">Choisir</a>
                                                     </div>
+                                                    <div id="iban5" class="card-title" style="display: none;"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -396,14 +392,13 @@
                                                     <img src="assets/img/vajilla.webp"
                                                         class="card-img-top" alt="Peaks Against the Starry Sky" />
                                                     <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
+                                                        <h5 class="card-title">Vaisselle</h5>
                                                         <p class="card-text">
-                                                            Some quick example text to build on the card title and make
-                                                            up the bulk
-                                                            of the card's content.
+                                                            Par contribution - 371 €
                                                         </p>
-                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                        <a onclick="hideAll(); show('6', 'Vaisselle')" class="btn btn-primary">Choisir</a>
                                                     </div>
+                                                    <div id="iban6" class="card-title" style="display: none;"></div>
                                                 </div>
                                             </div>
 
@@ -412,14 +407,13 @@
                                                     <img src="assets/img/couverts.webp"
                                                         class="card-img-top" alt="Bridge Over Water" />
                                                     <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
+                                                        <h5 class="card-title">Couverts</h5>
                                                         <p class="card-text">
-                                                            Some quick example text to build on the card title and make
-                                                            up the bulk
-                                                            of the card's content.
+                                                            Par contribution - 119 €
                                                         </p>
-                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                        <a onclick="hideAll(); show('7', 'Couverts')" class="btn btn-primary">Choisir</a>
                                                     </div>
+                                                    <div id="iban7" class="card-title" style="display: none;"></div>
                                                 </div>
                                             </div>
 
@@ -428,792 +422,157 @@
                                                     <img src="assets/img/agua.webp"
                                                         class="card-img-top" alt="Purbeck Heritage Coast" />
                                                     <div class="card-body">
-                                                        <h5 class="card-title">Card title</h5>
+                                                        <h5 class="card-title">Verres d'eau</h5>
                                                         <p class="card-text">
-                                                            Some quick example text to build on the card title and make
-                                                            up the bulk
-                                                            of the card's content.
+                                                            Par contribution - 99 €
                                                         </p>
-                                                        <a href="#!" class="btn btn-primary">Button</a>
+                                                        <a onclick="hideAll(); show('8', 'Verres d\'eau')" class="btn btn-primary">Choisir</a>
                                                     </div>
+                                                    <div id="iban8" class="card-title" style="display: none;"></div>
                                                 </div>
                                             </div>
                                         </div>
+                                </div>
+
+                                <!-- Single item -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="card">
+                                                <img src="assets/img/vino.webp"
+                                                    class="card-img-top" alt="Fissure in Sandstone" />
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Verres de vin</h5>
+                                                    <p class="card-text">
+                                                        Par contribution - 143 €
+                                                    </p>
+                                                    <a onclick="hideAll(); show('9', 'Verres de vin')" class="btn btn-primary">Choisir</a>
+                                                </div>
+                                                <div id="iban9" class="card-title" style="display: none;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="assets/img/abbacus.webp"
+                                                    class="card-img-top" alt="Storm Clouds" />
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Lampe Abbacus</h5>
+                                                    <p class="card-text">
+                                                        Par contribution - 160 €
+                                                    </p>
+                                                    <a onclick="hideAll(); show('10', 'Lampe Abbacus')" class="btn btn-primary">Choisir</a>
+                                                </div>
+                                                <div id="iban10" class="card-title" style="display: none;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="assets/img/greta.webp"
+                                                    class="card-img-top" alt="Hot Air Balloons" />
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Lampe Greta</h5>
+                                                    <p class="card-text">
+                                                        Par contribution - 120 €
+                                                    </p>
+                                                    <a onclick="hideAll(); show('11', 'Lampe Greta')" class="btn btn-primary">Choisir</a>
+                                                </div>
+                                                <div id="iban11" class="card-title" style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single item -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="card">
+                                                <img src="assets/img/lusa.webp"
+                                                    class="card-img-top" alt="Fissure in Sandstone" />
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Lampe Lusa</h5>
+                                                    <p class="card-text">
+                                                        Par contribution - 161 €
+                                                    </p>
+                                                    <a onclick="hideAll(); show('12', 'Lampe Lusa')" class="btn btn-primary">Choisir</a>
+                                                </div>
+                                                <div id="iban12" class="card-title" style="display: none;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="assets/img/lavadora.webp"
+                                                    class="card-img-top" alt="Storm Clouds" />
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Lave-linge</h5>
+                                                    <p class="card-text">
+                                                        Par contribution - 879 €
+                                                    </p>
+                                                    <a onclick="hideAll(); show('13', 'Lave-linge')" class="btn btn-primary">Choisir</a>
+                                                </div>
+                                                <div id="iban13" class="card-title" style="display: none;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="assets/img/nevera.webp"
+                                                    class="card-img-top" alt="Hot Air Balloons" />
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Frigo</h5>
+                                                    <p class="card-text">
+                                                        Par contribution - 799 €
+                                                    </p>
+                                                    <a onclick="hideAll(); show('14', 'Frigo')" class="btn btn-primary">Choisir</a>
+                                                </div>
+                                                <div id="iban14" class="card-title" style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Single item -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="card">
+                                                <img src="assets/img/horno.webp"
+                                                    class="card-img-top" alt="Fissure in Sandstone" />
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Four</h5>
+                                                    <p class="card-text">
+                                                        Par contribution - 849 €
+                                                    </p>
+                                                    <a onclick="hideAll(); show('15', 'Four')" class="btn btn-primary">Choisir</a>
+                                                </div>
+                                                <div id="iban15" class="card-title" style="display: none;"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 d-none d-lg-block">
+                                            <div class="card">
+                                                <img src="assets/img/induccion.webp"
+                                                    class="card-img-top" alt="Storm Clouds" />
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Induccion</h5>
+                                                    <p class="card-text">
+                                                        Par contribution - 635 €
+                                                    </p>
+                                                    <a onclick="hideAll(); show('16', 'Induccion')" class="btn btn-primary">Choisir</a>
+                                                </div>
+                                                <div id="iban16" class="card-title" style="display: none;"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             <!-- Inner -->
                         </div>
                         <!-- Carousel wrapper -->
 
-                        <ul class="gift-card__grid ui-sortable list-unstyled" id="gifts_summary">
-
-                            <li id="gift_8540779" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540779"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Aspirador Dyson"
-                                        data-src="https://asset1.zankyou.com/images/gift/49c/d6ff/434/320/-/de6/2a0/41c/1590666940.jpg"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/49c/d6ff/434/320/-/de6/2a0/41c/1590666940.jpg.webp">
-                                    <span class="gift-card__photo-title">
-                                        Aspirador Dyson<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Dyson</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="d-none d-md-inline-block">Disponible</span>
-                                            <span class="u-font--semibold">
-                                                1 </span>
-                                            de 1
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="price">700,99&nbsp;€</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540779"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540779"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540772" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540772"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Contribución para la casa"
-                                        data-src="https://asset1.zankyou.com/images/gift/435/4307/434/320/filter/crop/-/7dd/5bb/e9d/1618914839.jpg"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/435/4307/434/320/filter/crop/-/7dd/5bb/e9d/1618914839.jpg.webp">
-                                    <span class="gift-card__photo-title">
-                                        Contribución para la casa<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Zankyou Ideas</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540772"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540772"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540773" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540773"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset"
-                                        alt="Contribución al viaje de novios"
-                                        data-src="https://asset1.zankyou.com/images/gift/ca0/7315/434/320/-/3f2/dbd/d70/1618914812.jpg"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/ca0/7315/434/320/-/3f2/dbd/d70/1618914812.jpg.webp">
-                                    <span class="gift-card__photo-title">
-                                        Contribución al viaje de novios<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Zankyou Ideas</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540773"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540773"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540802" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540802"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Set de 3 piezas de aluminio"
-                                        data-src="https://asset1.zankyou.com/images/gift/ef6/013c/434/320/filter/frame/-/19e/b76/c1a/1671970766.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/ef6/013c/434/320/filter/frame/-/19e/b76/c1a/1671970766.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Set de 3 piezas de aluminio<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Le Creuset</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                279&nbsp;€ </span>
-                                            de 279&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540802"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540802"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540803" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540803"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset"
-                                        alt="Cocotte redonda de hierro fundido"
-                                        data-src="https://asset1.zankyou.com/images/gift/76b/9861/434/320/filter/frame/-/98f/44c/cfd/1671970897.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/76b/9861/434/320/filter/frame/-/98f/44c/cfd/1671970897.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Cocotte redonda de hierro fundido<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Le Creuset</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                315&nbsp;€ </span>
-                                            de 315&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540803"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540803"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540804" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540804"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset"
-                                        alt="Set de 3 cazos de aluminio antiadherente"
-                                        data-src="https://asset1.zankyou.com/images/gift/01b/bd6e/434/320/filter/frame/-/343/431/912/1671971051.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/01b/bd6e/434/320/filter/frame/-/343/431/912/1671971051.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Set de 3 cazos de aluminio antiadherente<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Le Creuset</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                459&nbsp;€ </span>
-                                            de 459&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540804"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540804"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540805" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540805"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Vajilla Porcelana"
-                                        data-src="https://asset1.zankyou.com/images/gift/6de/438a/434/320/filter/frame/-/12f/0a4/807/1671971469.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/6de/438a/434/320/filter/frame/-/12f/0a4/807/1671971469.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Vajilla Porcelana<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Zara Home</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                371&nbsp;€ </span>
-                                            de 371&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540805"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540805"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540806" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540806"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Cuberteria Mango Crudo"
-                                        data-src="https://asset1.zankyou.com/images/gift/6c6/27a9/434/320/filter/frame/-/bc1/429/a19/1671971794.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/6c6/27a9/434/320/filter/frame/-/bc1/429/a19/1671971794.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Cuberteria Mango Crudo<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Zara Home</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                119&nbsp;€ </span>
-                                            de 119&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540806"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540806"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540807" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540807"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Set de vasos de agua"
-                                        data-src="https://asset1.zankyou.com/images/gift/17b/60e3/434/320/filter/frame/-/d6f/af2/710/1671972340.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/17b/60e3/434/320/filter/frame/-/d6f/af2/710/1671972340.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Set de vasos de agua<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Villeroy &amp; Boch</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="d-none d-md-inline-block">Disponible</span>
-                                            <span class="u-font--semibold">
-                                                3 </span>
-                                            de 3
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="price">99&nbsp;€</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540807"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540807"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8540808" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8540808"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset"
-                                        alt="3 Juegos de 4 copas de vino tinto"
-                                        data-src="https://asset1.zankyou.com/images/gift/ecd/6d40/434/320/filter/frame/-/af8/5dc/8b2/1671972538.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/ecd/6d40/434/320/filter/frame/-/af8/5dc/8b2/1671972538.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        3 Juegos de 4 copas de vino tinto<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Villeroy &amp; Boch</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="d-none d-md-inline-block">Disponible</span>
-                                            <span class="u-font--semibold">
-                                                3 </span>
-                                            de 3
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="price">143,70&nbsp;€</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8540808"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8540808"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8566162" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8566162"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Lampara  Abbacus"
-                                        data-src="https://asset1.zankyou.com/images/gift/021/6ab5/434/320/filter/frame/-/cac/409/1da/1673173827.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/021/6ab5/434/320/filter/frame/-/cac/409/1da/1673173827.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Lampara Abbacus<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Años Luz</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                360,58&nbsp;€ </span>
-                                            de 360,58&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8566162"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8566162"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8566169" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8566169"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Luz Pie Birdie Easy"
-                                        data-src="https://asset1.zankyou.com/images/gift/869/6b91/434/320/filter/frame/-/8b1/a8c/0cb/1673173938.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/869/6b91/434/320/filter/frame/-/8b1/a8c/0cb/1673173938.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Luz Pie Birdie Easy<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Años Luz</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                377,52&nbsp;€ </span>
-                                            de 377,52&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8566169"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8566169"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8566182" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8566182"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Lampara Mesa Greta"
-                                        data-src="https://asset1.zankyou.com/images/gift/3a4/28a2/434/320/filter/frame/-/3d9/b22/92b/1673174078.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/3a4/28a2/434/320/filter/frame/-/3d9/b22/92b/1673174078.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Lampara Mesa Greta<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Años Luz</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                520,30&nbsp;€ </span>
-                                            de 520,30&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8566182"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8566182"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8566197" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8566197"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Lampara Mesa Lusa"
-                                        data-src="https://asset1.zankyou.com/images/gift/a92/830b/434/320/filter/frame/-/58f/0b4/15a/1673174276.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/a92/830b/434/320/filter/frame/-/58f/0b4/15a/1673174276.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Lampara Mesa Lusa<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Años Luz</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                261,36&nbsp;€ </span>
-                                            de 261,36&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8566197"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8566197"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8566284" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8566284"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Lavadora Bosch"
-                                        data-src="https://asset1.zankyou.com/images/gift/5ab/744c/434/320/filter/frame/-/dd9/2e3/b7d/1673175877.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/5ab/744c/434/320/filter/frame/-/dd9/2e3/b7d/1673175877.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Lavadora Bosch<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Bosh</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                879&nbsp;€ </span>
-                                            de 879&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8566284"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8566284"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8566300" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8566300"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Nevera Bosch"
-                                        data-src="https://asset1.zankyou.com/images/gift/77c/9fdd/434/320/filter/frame/-/24e/fbe/4aa/1673175963.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/77c/9fdd/434/320/filter/frame/-/24e/fbe/4aa/1673175963.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Nevera Bosch<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Bosh</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                799&nbsp;€ </span>
-                                            de 799&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8566300"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8566300"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8566307" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8566307"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Horno Bosch"
-                                        data-src="https://asset1.zankyou.com/images/gift/109/8394/434/320/filter/frame/-/bd3/b67/db9/1673176062.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/109/8394/434/320/filter/frame/-/bd3/b67/db9/1673176062.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Horno Bosch<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Bosh</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                1,34&nbsp;€ </span>
-                                            de 1,34&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8566307"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8566307"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                            <li id="gift_8566314" class="js-element-wrapper gift-card">
-                                <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/regalo/id/8566314"
-                                    class="gift-card__photo-wrapper">
-                                    <img class="gift-card__photo lazyload js-dynasset" alt="Placa de inducción"
-                                        data-src="https://asset1.zankyou.com/images/gift/006/d996/434/320/filter/frame/-/393/86d/0ad/1673176140.png"
-                                        loading="lazy"
-                                        src="https://asset1.zankyou.com/images/gift/006/d996/434/320/filter/frame/-/393/86d/0ad/1673176140.png.webp">
-                                    <span class="gift-card__photo-title">
-                                        Placa de inducción<br>
-                                    </span>
-                                </a>
-                                <div class="gift-card__info">
-                                    <p class="gift-card__category">
-                                        <span>Bosch</span><br>
-                                    </p>
-                                    <div class="gift-card__availability">
-                                        <p class="gift-card__units mbn">
-                                            <span class="u-font--semibold">
-                                                635&nbsp;€ </span>
-                                            de 635&nbsp;€
-                                        </p>
-                                    </div>
-                                    <div class="gift-card__price">
-                                        <div class="gift-card__contribute">Regalo por contribución</div>
-                                    </div>
-                                </div>
-                                <svg class="js-sortable-handler gift-card__drag icon js-lazy-icon ui-sortable-handle"
-                                    aria-hidden="true" width="20" height="20">
-                                    <use href="#i-drag-dots"></use>
-                                </svg>
-                                <div class="gift-card__actions">
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/delete-gift/id/8566314"
-                                        data-zk-message="Vas a eliminar los regalos seleccionados. ¿Estás seguro?"
-                                        class="zk-button--square--black auto-width small">
-                                        borrar </a>
-                                    <a href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/editar-regalo/id/8566314"
-                                        class="zk-button--square--black auto-width small">
-                                        editar </a>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="paginator-on-giftlist variant-font">
-                            <form action="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/lista-de-bodas-novios"
-                                method="post" data-crawler="preserve-form">
-                                <div class="row d-none d-md-flex">
-                                    <div class="col-4">
-                                        <a class="zk-button--square--black auto-width"
-                                            href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/lista-de-bodas-novios/num/28/view/list">
-                                            Todas </a>
-                                    </div>
-                                    <div class="col-8 text-end">
-                                        <div class="row row-cols-sm-auto u-box__flex--vcenter u-box__flex--justify--end mrs"
-                                            data-crawler="hide">
-                                            Cantidad de resultados por página:
-                                            <select id="elements_per_page" class="mls form-control" name="num"
-                                                onchange="zk.redirect('https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/lista-de-bodas-novios?num=' + this.value)">
-                                                <option value="6">6</option>
-                                                <option value="9">9</option>
-                                                <option value="12">12</option>
-                                                <option value="15">15</option>
-                                                <option selected="selected" value="18">18</option>
-                                                <option value="21">21</option>
-                                                <option value="24">24</option>
-                                                <option value="27">27</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mbs mts">
-                                    <div class="col-12 text-center">
-                                        <button type="button"
-                                            class="zk-button--square--green--full auto-width disabled">
-                                            « Anterior </button>
-                                        <div class="u-box__inline-block d-none d-md-inline-block">
-                                            <button type="button"
-                                                class="zk-button--square--green--full auto-width disabled">
-                                                1 </button>
-                                            <a class="zk-button--square--black auto-width"
-                                                href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/lista-de-bodas-novios?page=2">2</a>
-                                        </div>
-                                        <a class="zk-button--square--black auto-width"
-                                            href="https://www.zankyou.es/b/begoquentin2023/lista-de-bodas/lista-de-bodas-novios?page=2">Siguiente
-                                            »</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
